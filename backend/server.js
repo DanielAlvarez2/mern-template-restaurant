@@ -34,5 +34,15 @@ app.post('/api/dinner', async(req,res)=>{
     }
 })
 
+app.delete('/api/dinner/:id',async(req,res)=>{
+    try{
+        await DinnerMenuItem.findByIdAndDelete(req.params.id)
+        console.log(`Item Deleted from Database`)
+        res.json(`Item Deleted from Database`)
+    }catch(err){
+        console.log(err)
+    }
+})
+
 const PORT = process.env.PORT || 1243
 app.listen(PORT, ()=> console.log(`Server Running on Port: ${PORT}`))
