@@ -14,7 +14,7 @@ console.log(''); // SEMICOLON REQUIRED BEFORE IIFE!!!
     }catch(err){
         console.log(err)
     }
-})
+})()
 
 const PORT = process.env.PORT || 1243
 app.listen(PORT, ()=> console.log(`Server Running on Port: ${PORT}`))
