@@ -69,6 +69,12 @@ DEPLOY WEB SERVICE
   
 /frontend $ npm run build  
 new /dist folder is created  
+  
+Netlify.com  
+Add new project > Import an existing project  
+Select GitHub  
+Select Repo  
+
 
 
 
