@@ -10,7 +10,6 @@ Copy new repo URL "https://github.com/DanielAlvarez2/???????.git"
 
 VS Code:  
 File > New Window  
-Control + \`  
 $ cd desktop  
 $ git clone Command + V to paste new GitHub Repo URL  
 Open Folder Icon  
