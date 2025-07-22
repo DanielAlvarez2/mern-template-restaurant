@@ -58,7 +58,7 @@ export default function App() {
 ```
 
 Render.com  
-+ Add New > Web Service  
+\+ Add New > Web Service  
 Select GitHub Repo from Dropdown Menu  
 Root Directory: ./backend  
 Build Command: backend/ $ npm install  
