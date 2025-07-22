@@ -20,12 +20,13 @@ console.log(''); // SEMICOLON REQUIRED BEFORE IIFE!!!
 app.post('/api/dinner', async(req,res)=>{
     try{
         const maxSequence = await DinnerMenuItem.findOne({section:req.body.section}).sort({sequence:-1})
+        console.log(maxSequence)
         await DinnerMenuItem.create({
             section:req.body.section,
             name:req.body.name,
             description: req.body.description,
             price: req.body.price,
-            sequence: maxSequence ? maxSequence + 1 : 1
+            sequence: maxSequence ? maxSequence.sequence + 1 : 1
         })
         console.log(`Added to Database: ${req.body.name}`)
         res.json(`Added to Database: ${req.body.name}`)
@@ -39,6 +40,15 @@ app.delete('/api/dinner/:id',async(req,res)=>{
         await DinnerMenuItem.findByIdAndDelete(req.params.id)
         console.log(`Item Deleted from Database`)
         res.json(`Item Deleted from Database`)
+    }catch(err){
+        console.log(err)
+    }
+})
+
+app.get('/api/dinner', async(req,res)=>{
+    try{
+        const allDinnerItems = await DinnerMenuItem.find().sort({sequence:1})
+        res.json(allDinnerItems)
     }catch(err){
         console.log(err)
     }
