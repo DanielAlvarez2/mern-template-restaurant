@@ -73,7 +73,7 @@ app.put('/api/dinner/:id', async(req,res)=>{
             description:req.body.description,
             price:req.body.price,
         })
-        console.log(`Updated in Database: ${req.bodyname}`)
+        console.log(`Updated in Database: ${req.body.name}`)
         res.json(`Updated in Database: ${req.body.name}`)
     }catch(err){
         console.log(err)
