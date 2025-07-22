@@ -71,6 +71,7 @@ Netlify.com
 Add new project > Import an existing project  
 Select GitHub  
 Select Repo  
+Project Name: defaults to silly name  
 Base directory: frontend  
 Build command: npm run build  
 Publish directory: frontend/dist  
