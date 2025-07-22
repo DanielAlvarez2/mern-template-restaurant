@@ -54,5 +54,15 @@ app.get('/api/dinner', async(req,res)=>{
     }
 })
 
+app.get('/api/dinner/:id', async(req,res)=>{
+    try{
+        const dinnerItem = await DinnerMenuItem.findById(req.params.id)
+        console.log(dinnerItem)
+        res.json(dinnerItem)
+    }catch(err){
+        console.log(err)
+    }
+})
+
 const PORT = process.env.PORT || 1243
 app.listen(PORT, ()=> console.log(`Server Running on Port: ${PORT}`))

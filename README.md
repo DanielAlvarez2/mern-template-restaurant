@@ -12,8 +12,8 @@ use "raw" not "form-data"
 create express api CRUD  
 POST  
 DELETE  
-GET  
-GET ALL  
+GET ALL   
+GET ONE    
 PUT  
 
 
