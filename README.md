@@ -306,8 +306,7 @@ Confirm menu items displaying in browser
 $ git add .  
 $ git commit -m 'frontend displaying database from backend'  
 $ git push  
- 
-
+   
 Render.com  
 \+ Add New > Web Service  
 Select GitHub Repo from Dropdown Menu  
@@ -317,7 +316,22 @@ Start Command: backend/ $ node server.js
 Select: "Free $0/month"  
 Environment Variables: MONGODB_URI copy from .env file  
 DEPLOY WEB SERVICE  
-    
+Maximize Logs  
+Wait for: "Your service is live"  
+  
+/frontend/src/App.jsx  
+```
+export default function App() {
+  const BASE_URL =  (process.env.NODE_ENV == 'production') ? 
+                    'https://mern-template-restaurant.onrender.com' : 
+                    'http://localhost:1435'
+  const getDinnerItems = ()=>{
+    fetch(`${BASE_URL}/api/dinner`)
+```
+$ git add .  
+$ git commit -m 'add BASE_URL from Render.com in App.jsx fetch'   
+$ git push  
+  
 Netlify.com  
 Add new project > Import an existing project  
 Select GitHub  
@@ -326,27 +340,24 @@ Project Name: defaults to silly name
 Base directory: frontend  
 Build command: npm run build  
 Publish directory: frontend/dist  
-Add environment variables  
+Add environment variables > Add key/value pairs  
 Key: REACT_APP_BACKEND_URL  
 Value: copy url from Render  
 Click Deploy  
+Wait for: "Your project is deployed"  
+Click on URL  
+Confirm Netlify is displaying Database from Render.com  
   
-/backend $ npm i cors  
-/backend/server.js  `app.use(cors())`  
-
-/frontend/src/App.jsx  
-```
-export default function App() {
-  const BASE_URL =  (process.env.NODE_ENV == 'production') ? 
-                    'https://mern-template-restaurant.onrender.com' : 
-                    'http://localhost:5174'
-  const getDinnerItems = ()=>{
-    fetch(`${BASE_URL}/api/dinner`)
-
-```
 /frontend $ npm i react-router  
+/frontend/src \+CREATE NEW FILE: touch Test.jsx   
+/frontend/src/Test.jsx  
+```. 
+export default function Test(){
+    return <h1>TEST PAGE</h1>
+}
+```
   
-/frontend/src/main.jsx  
+/frontend/src/main.jsx:  
 ```
 import ReactDOM from 'react-dom/client'
 import React from 'react'
@@ -364,14 +375,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>
 ```
-/frontend/public/_redirects `/* /index.html 200`  
+/frontend/public/ \+CREATE NEW FILE: _redirects `/* /index.html 200`  
     
-/frontend/src/Test.jsx  
-```
-export default function Test(){
-    return <h1>TEST PAGE</h1>
-}
-```
+$ git add .  
+$ git commit -m 'configure react-router'  
+$ git push  
+
+Netlify: wait for deploy to go live  
+navigate to Netlify URL/test  
+
+  
+LESS THAN 3 HOURS TO COMPLETE  
 
 
 
