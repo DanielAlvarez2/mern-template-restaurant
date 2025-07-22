@@ -20,7 +20,7 @@ PUT
 $ create vite@latest .  
 
 /frontend/vite.config.js  
-
+```
 export default defineConfig({  
   plugins: [react()],  
   server:{  
@@ -29,9 +29,10 @@ export default defineConfig({
     }  
   }  
 })  
-  
+```
+    
 /frontend/src/App.jsx  
-  
+```
 import { useState, useEffect } from 'react'  
 export default function App() {  
   const [dinnerItems, setDinnerItems] = useState([])  
@@ -54,7 +55,7 @@ export default function App() {
     </>  
   )  
 }  
-
+```
 
 
   
