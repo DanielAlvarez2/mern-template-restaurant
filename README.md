@@ -66,15 +66,18 @@ Start Command: backend/ $ node server.js
 Select: "Free $0/month"  
 Environment Variables: MONGODB_URI copy from .env file  
 DEPLOY WEB SERVICE  
-  
-/frontend $ npm run build  
-new /dist folder is created  
-  
+    
 Netlify.com  
 Add new project > Import an existing project  
 Select GitHub  
 Select Repo  
-
+Base directory: frontend  
+Build command: npm run build  
+Publish directory: frontend/dist  
+Add environment variables  
+Key: REACT_APP_BACKEND_URL  
+Value: copy url from Render  
+Click Deploy  
 
 
 
