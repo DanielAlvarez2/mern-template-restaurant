@@ -28,7 +28,7 @@ $ git commit -m 'initial commit'
 $ git push  
 $ mkdir backend  
 $ mkdir frontend  
-Control + `  
+Control + \`  
 $ cd backend  
 /backend $ npm init -y  
 /backend/package.json created  
