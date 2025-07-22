@@ -15,7 +15,6 @@ $ cd desktop
 $ git clone Command + V to paste new GitHub Repo URL  
 Open Folder Icon  
 Open Folder of New GitHub Repo  
-Control + `  
 $ touch .gitignore  
 .gitignore:  
     .env  
@@ -28,7 +27,6 @@ $ git commit -m 'initial commit'
 $ git push  
 $ mkdir backend  
 $ mkdir frontend  
-Control + \`  
 $ cd backend  
 /backend $ npm init -y  
 /backend/package.json created  
