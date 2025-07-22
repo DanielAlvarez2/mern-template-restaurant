@@ -79,7 +79,49 @@ Add environment variables
 Key: REACT_APP_BACKEND_URL  
 Value: copy url from Render  
 Click Deploy  
+  
+/backend $ npm i cors  
+/backend/server.js  `app.use(cors())`  
 
+/frontend/src/App.jsx  
+```
+export default function App() {
+  const BASE_URL =  (process.env.NODE_ENV == 'production') ? 
+                    'https://mern-template-restaurant.onrender.com' : 
+                    'http://localhost:5174'
+  const getDinnerItems = ()=>{
+    fetch(`${BASE_URL}/api/dinner`)
+
+```
+/frontend $ npm i react-router  
+  
+/frontend/src/main.jsx  
+```
+import ReactDOM from 'react-dom/client'
+import React from 'react'
+import {BrowserRouter,Routes,Route} from 'react-router'
+import App from './App.jsx'
+import Test from './Test.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='test' element={<Test />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>,
+
+```
+  
+
+/frontend/src/Test.jsx  
+```
+export default function Test(){
+    return <h1>TEST PAGE</h1>
+}
+```
 
 
 
