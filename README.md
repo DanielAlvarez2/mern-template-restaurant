@@ -57,6 +57,23 @@ export default function App() {
 }  
 ```
 
+Render.com  
++ Add New > Web Service  
+Select GitHub Repo from Dropdown Menu  
+Root Directory: ./backend  
+Build Command: backend/ $ npm install  
+Start Command: backend/ $ node server.js  
+Select: "Free $0/month"  
+Environment Variables: MONGODB_URI copy from .env file  
+DEPLOY WEB SERVICE  
+  
+/frontend $ npm run build  
+new /dist folder is created  
+
+
+
+
+
 
   
 
