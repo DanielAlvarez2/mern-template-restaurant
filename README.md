@@ -111,11 +111,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='test' element={<Test />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
-
+  </StrictMode>
 ```
-  
-
+/frontend/public/_redirects `/* /index.html 200`  
+    
 /frontend/src/Test.jsx  
 ```
 export default function Test(){
